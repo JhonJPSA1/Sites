@@ -172,60 +172,52 @@ footer {
     right: 10px;
 }
 
-/* Responsividade para telas até 900px */
-@media (max-width: 900px) {
+/* Menu colapsável para telas menores */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+
+@media (max-width: 600px) {
+    .menu-toggle {
+        display: block;
+    }
+
     nav ul {
+        display: none;
         flex-direction: column;
+        background-color: #007BFF;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        left: 0;
+        padding: 0;
+    }
+
+    nav ul.show {
+        display: flex;
     }
 
     nav ul li {
-        margin: 10px 0; /* Aumenta o espaçamento entre os itens */
+        margin: 10px 0;
     }
 
-    .image-gallery {
-        grid-template-columns: repeat(2, 1fr); /* Duas colunas */
-    }
-
-    .gallery-title {
-        font-size: 22px; /* Reduz um pouco o tamanho do título */
-    }
-
-    .image-item {
-        padding: 10px; /* Reduz o espaçamento interno */
-    }
-
-    .image-item p {
-        font-size: 14px; /* Reduz o tamanho do texto */
-    }
-}
-
-/* Responsividade para telas até 600px */
-@media (max-width: 600px) {
     nav ul li a {
-        font-size: 20px; /* Reduz o tamanho da fonte na navegação */
+        font-size: 20px;
     }
 
     .image-gallery {
-        grid-template-columns: 1fr; /* Uma coluna */
+        grid-template-columns: 1fr;
     }
 
     .gallery-title {
-        font-size: 20px; /* Reduz o tamanho do título */
-    }
-
-    .image-item {
-        padding: 10px; /* Ajusta o espaçamento interno */
-    }
-
-    .image-item p {
-        font-size: 14px; /* Reduz o tamanho do texto */
-    }
-
-    footer {
-        padding: 10px; /* Reduz o espaçamento do rodapé */
-    }
-
-    .footer-content p {
-        font-size: 12px; /* Reduz o tamanho do texto no rodapé */
+        font-size: 20px;
     }
 }
+
