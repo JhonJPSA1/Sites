@@ -118,60 +118,6 @@ footer {
     font-size: 18px;
 }
 
-.image-carousel {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.carousel-item {
-    display: none;
-}
-
-.carousel-item.active {
-    display: block;
-}
-
-.carousel {
-    position: relative;
-    overflow: hidden;
-}
-
-.carousel-images {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-.carousel-item {
-    min-width: 100%;
-    text-align: center;
-}
-
-.carousel-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-}
-
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
-}
-
 /* Menu colapsável para telas menores */
 .menu-toggle {
     display: none;
@@ -186,11 +132,11 @@ footer {
 
 @media (max-width: 600px) {
     .menu-toggle {
-        display: block;
+        display: block; /* Exibe o ícone de menu nas telas menores */
     }
 
     nav ul {
-        display: none;
+        display: none; /* Esconde o menu de navegação padrão */
         flex-direction: column;
         background-color: #007BFF;
         position: absolute;
@@ -201,11 +147,12 @@ footer {
     }
 
     nav ul.show {
-        display: flex;
+        display: flex; /* Exibe o menu colapsado ao clicar no ícone */
     }
 
     nav ul li {
         margin: 10px 0;
+        text-align: center;
     }
 
     nav ul li a {
@@ -220,4 +167,3 @@ footer {
         font-size: 20px;
     }
 }
-
