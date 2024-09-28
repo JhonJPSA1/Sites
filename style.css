@@ -1,0 +1,172 @@
+html, body {
+    height: 100%; /* Garantir que a altura do body seja 100% */
+    margin: 0; /* Remover margens padrão */
+    display: flex;
+    flex-direction: column; /* Coloca os elementos em coluna */
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    background-color: #007BFF; /* Cor azul */
+    padding: 10px 0; /* Espaçamento interno */
+    text-align: center; /* Centraliza o conteúdo da nav */
+}
+
+nav ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Alinha os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens na nav */
+}
+
+nav ul li {
+    margin: 0 20px; /* Espaçamento entre os itens */
+}
+
+nav ul li a {
+    color: white; /* Cor do texto em branco para contraste */
+    text-decoration: none; /* Remove o sublinhado */
+    font-family: 'Dancing Script', cursive; /* Fonte mais legível */
+    font-size: 30px; /* Aumenta o tamanho da fonte */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Sublinha ao passar o mouse */
+}
+
+.spacer {
+    height: 30px; /* Altura do espaço entre a navbar e a galeria */
+}
+
+.image-gallery {
+    display: grid; /* Usando grid para layout */
+    grid-template-columns: repeat(3, 1fr); /* Três colunas */
+    gap: 20px; /* Espaçamento entre os itens */
+    padding: 20px; /* Espaçamento interno da seção */
+    flex: 1; /* Faz a galeria ocupar o espaço restante */
+}
+
+.gallery-title {
+    grid-column: span 3; /* Faz o título ocupar as três colunas */
+    text-align: center; /* Centraliza o título */
+    font-size: 24px; /* Tamanho do título */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+.image-item {
+    text-align: center; /* Centraliza o texto abaixo das imagens */
+    border: 1px solid #007BFF; /* Borda azul */
+    border-radius: 8px; /* Cantos arredondados */
+    padding: 15px; /* Espaçamento interno */
+    transition: transform 0.2s; /* Efeito de transição ao passar o mouse */
+}
+
+.image-item:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente o card ao passar o mouse */
+}
+
+.image-item img {
+    width: 100%; /* Faz a imagem ocupar toda a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Cantos arredondados para as imagens */
+}
+
+.image-item p {
+    margin: 10px 0; /* Espaçamento entre a imagem e o texto */
+    font-size: 16px; /* Tamanho do texto */
+}
+
+.image-item a {
+    display: inline-block; /* Permite definir padding e margin */
+    margin-top: 10px; /* Espaçamento acima do link */
+    padding: 10px 15px; /* Espaçamento interno do link */
+    background-color: #007BFF; /* Cor de fundo azul */
+    color: white; /* Cor do texto em branco */
+    text-decoration: none; /* Remove sublinhado */
+    border-radius: 5px; /* Cantos arredondados para o link */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
+
+.image-item a:hover {
+    background-color: #0056b3; /* Cor de fundo mais escura ao passar o mouse */
+}
+
+footer {
+    background-color: #007BFF; /* Cor de fundo do footer agora é azul */
+    padding: 20px; /* Espaçamento interno do footer */
+    text-align: center; /* Centraliza o conteúdo do footer */
+    margin-top: auto; /* Faz com que o footer fique no final */
+}
+
+.footer-content {
+    max-width: 800px; /* Limita a largura do conteúdo */
+    margin: 0 auto; /* Centraliza o conteúdo */
+}
+
+.footer-content p {
+    margin: 5px 0; /* Espaçamento entre os parágrafos */
+    font-size: 14px; /* Tamanho da fonte */
+}
+
+.contact-info h3 {
+    margin: 10px 0; /* Espaçamento acima do título de contato */
+    font-size: 18px; /* Tamanho do título */
+}
+
+.image-carousel {
+    position: relative;
+    max-width: 800px; /* Largura máxima do carrossel */
+    margin: 0 auto; /* Centraliza o carrossel */
+}
+
+.carousel-item {
+    display: none; /* Esconde todas as imagens */
+}
+
+.carousel-item.active {
+    display: block; /* Apenas a imagem ativa é exibida */
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden; /* Esconde imagens fora do contêiner */
+}
+
+.carousel-images {
+    display: flex; /* Alinha as imagens em linha */
+    transition: transform 0.5s ease; /* Transição suave ao mudar de imagem */
+}
+
+.carousel-item {
+    min-width: 100%; /* Cada item ocupa 100% da largura */
+    text-align: center; /* Centraliza o texto abaixo das imagens */
+}
+
+.carousel-item img {
+    width: 100%; /* Faz a imagem ocupar toda a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Cantos arredondados para as imagens */
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda */
+    padding: 10px; /* Espaçamento interno */
+    cursor: pointer; /* Muda o cursor para pointer */
+}
+
+.prev {
+    left: 10px; /* Posição do botão anterior */
+}
+
+.next {
+    right: 10px; /* Posição do botão próximo */
+}
