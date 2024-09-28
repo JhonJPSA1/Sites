@@ -1,103 +1,60 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
     <title>Ateliê Carinho em Papel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> <!-- Seu arquivo CSS externo -->
 </head>
-
 <body>
-    <header>
-        <nav>
-    <div class="menu-toggle" id="menu-toggle">
-        &#9776; <!-- Ícone do menu -->
+
+    <nav>
+        <div class="menu-toggle" id="menu-toggle">
+            &#9776; <!-- Ícone do menu colapsável -->
+        </div>
+        <ul id="nav-list">
+            <li><a href="#home">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#produtos">Produtos</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <div class="spacer"></div>
+
+    <!-- Conteúdo da galeria de imagens -->
+    <div class="image-gallery">
+        <h2 class="gallery-title">Galeria de Imagens</h2>
+        <div class="image-item">
+            <img src="src/img/1.jpg" alt="Imagem 1">
+            <p>Descrição da Imagem 1</p>
+            <a href="#">Ver Mais</a>
+        </div>
+        <div class="image-item">
+            <img src="src/img/2.jpg" alt="Imagem 2">
+            <p>Descrição da Imagem 2</p>
+            <a href="#">Ver Mais</a>
+        </div>
+        <div class="image-item">
+            <img src="src/img/3.jpg" alt="Imagem 3">
+            <p>Descrição da Imagem 3</p>
+            <a href="#">Ver Mais</a>
+        </div>
     </div>
-    <ul id="nav-list">
-        <li><a href="#home">Início</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#produtos">Produtos</a></li>
-        <li><a href="#contato">Contato</a></li>
-    </ul>
-</nav>
-
-
-        <section class="image-carousel">
-            <h2 class="gallery-title">Nossos Serviços</h2> <!-- Título da seção -->
-            <div class="carousel">
-                <div class="carousel-images">
-                    <div class="carousel-item active">
-                        <img src="caminho/para/imagem1.jpg" alt="Descrição da imagem 1">
-                        <p>Texto da imagem 1</p>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="caminho/para/imagem2.jpg" alt="Descrição da imagem 2">
-                        <p>Texto da imagem 2</p>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="caminho/para/imagem3.jpg" alt="Descrição da imagem 3">
-                        <p>Texto da imagem 3</p>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="caminho/para/imagem4.jpg" alt="Descrição da imagem 4">
-                        <p>Texto da imagem 4</p>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="caminho/para/imagem5.jpg" alt="Descrição da imagem 5">
-                        <p>Texto da imagem 5</p>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="caminho/para/imagem6.jpg" alt="Descrição da imagem 6">
-                        <p>Texto da imagem 6</p>
-                    </div>
-                </div>
-                <button class="carousel-button prev" onclick="changeSlide(-1)">&#10094;</button>
-                <button class="carousel-button next" onclick="changeSlide(1)">&#10095;</button>
-            </div>
-        </section>
-
-    </header>
-
-    <main>
-        <div class="spacer"></div> <!-- Espaço entre a navbar e a galeria -->
-
-        <section class="image-gallery">
-            <h2 class="gallery-title">Nossos Serviços</h2>
-            <div class="image-item">
-                <img src="caminho/para/imagem1.jpg" alt="Descrição da imagem 1">
-                <p>Texto da imagem 1</p>
-                <a href="#servico1">Saiba mais</a>
-            </div>
-            <div class="image-item">
-                <img src="caminho/para/imagem2.jpg" alt="Descrição da imagem 2">
-                <p>Texto da imagem 2</p>
-                <a href="#servico2">Saiba mais</a>
-            </div>
-            <div class="image-item">
-                <img src="caminho/para/imagem3.jpg" alt="Descrição da imagem 3">
-                <p>Texto da imagem 3</p>
-                <a href="#servico3">Saiba mais</a>
-            </div>
-            <!-- Adicione mais cards conforme necessário -->
-        </section>
-        
-    </main>
 
     <footer>
         <div class="footer-content">
-            <p>Ateliê Carinho em Papel é o seu espaço para encontrar produtos personalizados e artesanais que trazem amor e alegria para todas as ocasiões.</p>
-            <div class="contact-info">
-                <h3>Contato</h3>
-                <p>Email: contato@ateliecarinhoempapel.com.br</p>
-                <p>Telefone: (11) 1234-5678</p>
-                <p>Instagram: @ateliecarinhoempapel</p>
-            </div>
+            <p>Ateliê Carinho em Papel &copy; 2024 - Todos os Direitos Reservados</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
-</body>
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const navList = document.getElementById('nav-list');
+            navList.classList.toggle('show'); // Alterna entre mostrar e esconder o menu
+        });
+    </script>
 
+</body>
 </html>
