@@ -25,5 +25,11 @@ function startSlideInterval() {
     }, 3000); // Troca a imagem a cada 3 segundos
 }
 
+document.getElementById('menu-toggle').addEventListener('click', function() {
+    const navList = document.getElementById('nav-list');
+    navList.classList.toggle('show');
+});
+
 // Inicia o autoplay ao carregar a página
 window.onload = startSlideInterval;
+
